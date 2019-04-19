@@ -1,7 +1,9 @@
 import os
 import csv
+import getpass
 
 from telethon.sync import TelegramClient
+from telethon.errors import SessionPasswordNeededError
 
 api_id = os.environ.get('API_ID')
 api_hash = os.environ.get('API_HASH')
@@ -13,7 +15,10 @@ print(api_id, api_hash, phone)
 client.connect()
 if not client.is_user_authorized():
     client.send_code_request(phone)
-    client.sign_in(phone, input('Enter the code: '))
+    try:
+        client.sign_in(phone, input('Enter the code: '))
+    except SessionPasswordNeededError:
+        client.sign_in(password=getpass.getpass())
 
 
 from telethon.tl.functions.messages import GetDialogsRequest

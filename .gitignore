@@ -1,3 +1,5 @@
 .vscode
 .pyc
 .env
+*.session
+*.csv

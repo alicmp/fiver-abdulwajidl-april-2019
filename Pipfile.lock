@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8c94a2481c60c126b7999cccc675908a635d5779d9e8d1bc5ea8eeca42840de7"
+            "sha256": "1a88e1096b96d97a8e6d9fc98b54c6400508ed758887b5caab87f23f7c85ff88"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,35 @@
         ]
     },
     "default": {
+        "certifi": {
+            "hashes": [
+                "sha256:59b7658e26ca9c7339e00f8f4636cdfe59d34fa37b9b04f6f9e9926b3cece1a5",
+                "sha256:b26104d6835d1f5e49452a26eb2ff87fe7090b89dfcaee5ea2212697e1e1d7ae"
+            ],
+            "version": "==2019.3.9"
+        },
+        "chardet": {
+            "hashes": [
+                "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae",
+                "sha256:fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"
+            ],
+            "version": "==3.0.4"
+        },
+        "facebook-sdk": {
+            "hashes": [
+                "sha256:2e987b3e0f466a6f4ee77b935eb023dba1384134f004a2af21f1cfff7fe0806e",
+                "sha256:cabcd2e69ea3d9f042919c99b353df7aa1e2be86d040121f6e9f5e63c1cf0f8d"
+            ],
+            "index": "pypi",
+            "version": "==3.1.0"
+        },
+        "idna": {
+            "hashes": [
+                "sha256:c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407",
+                "sha256:ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"
+            ],
+            "version": "==2.8"
+        },
         "pyaes": {
             "hashes": [
                 "sha256:02c1b1405c38d3c370b085fb952dd8bea3fadcee6411ad99f312cc129c536d8f"
@@ -28,6 +57,13 @@
                 "sha256:da6b43a8c9ae93bc80e2739efb38cc776ba74a886e3e9318d65fe81a8b8a2c6e"
             ],
             "version": "==0.4.5"
+        },
+        "requests": {
+            "hashes": [
+                "sha256:502a824f31acdacb3a35b6690b5fbf0bc41d63a24a45c4004352b0242707598e",
+                "sha256:7bf2a778576d825600030a110f3c0e3e8edc51dfaafe1c146e39a2027784957b"
+            ],
+            "version": "==2.21.0"
         },
         "rsa": {
             "hashes": [
@@ -42,6 +78,13 @@
             ],
             "index": "pypi",
             "version": "==1.6.2"
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:4c291ca23bbb55c76518905869ef34bdd5f0e46af7afe6861e8375643ffee1a0",
+                "sha256:9a247273df709c4fedb38c711e44292304f73f39ab01beda9f6b9fc375669ac3"
+            ],
+            "version": "==1.24.2"
         }
     },
     "develop": {}

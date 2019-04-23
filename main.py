@@ -1,6 +1,7 @@
 import os
 import getpass
 
+from configparser import ConfigParser
 from telethon.sync import TelegramClient
 from telethon.errors import SessionPasswordNeededError
 from telethon import events
@@ -11,6 +12,10 @@ import logging
 logging.basicConfig(level=logging.ERROR)
 
 
+cfg = ConfigParser()
+cfg.read('config.ini')
+
+
 def get_channels():
     channels = []
     with open('channels.txt', 'r') as f:
@@ -18,9 +23,10 @@ def get_channels():
     return tuple(channels)
 
 
-api_id = os.environ.get('API_ID')
-api_hash = os.environ.get('API_HASH')
-phone = os.environ.get('PHONE_NUMBER')
+api_id = cfg.get('telegram', 'API_ID')
+api_hash = cfg.get('telegram', 'API_HASH')
+phone = cfg.get('telegram', 'PHONE_NUMBER')
+print(api_id, api_hash, phone)
 client = TelegramClient(phone, api_id, api_hash)
 
 

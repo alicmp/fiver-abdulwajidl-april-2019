@@ -4,3 +4,4 @@
 *.session
 *.csv
 media/*
+config.ini

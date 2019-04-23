@@ -1,12 +1,18 @@
 import os
 import requests
-# from requests_toolbelt import MultipartEncoder
+
+from configparser import ConfigParser
 from graphapiext import GraphAPIExt
 
-access_token = os.environ.get('FB_ACCESS_TOKEN')
-# access_token = 'EAAIghCwTMBwBAH0Ozt1bi1UZBtCIh8pbxZB9UW8qzTG56nd3XRYWAJJZCflZCN6vGhl4vFWbqzAF9RuYSoaZCnsr9dsU2RGKhHRUiJNNVJNsytglhj3wZBnKyxlJw5kZBVdip6EVOgtQaHQHQseNNgWpIe5GLpIZAA1NgCBzKBdSLQZDZD'
-app_id = os.environ.get('FB_APP_ID')
-app_secret = os.environ.get('FB_APP_SECRET')
+import logging
+logging.basicConfig(level=logging.ERROR)
+
+cfg = ConfigParser()
+cfg.read('config.ini')
+
+access_token = cfg.get('facebook', 'FB_LONG_LIVE_ACCESS_TOKEN')
+app_id = cfg.get('facebook', 'FB_APP_ID')
+app_secret = cfg.get('facebook', 'FB_APP_SECRET')
 
 fb = GraphAPIExt(
     access_token=access_token

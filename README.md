@@ -16,8 +16,8 @@ FB_APP_ID =
 FB_APP_SECRET = ""
 ```
 Then create virtual environment by typing
-`pipenv shell`
+```pipenv shell```
 Then install packages
-`pipenv install`
+```pipenv install```
 Finally run the code
-`python main.py`
+```python main.py```

@@ -4,7 +4,7 @@ With this project you can scrape data from certain telegram channels and post th
 - Python 3.6
 - pipenv
 ## Configuration
-First Create .env file and put these info in it:
+First Create congig.ini file and put these info in it:
 ```
 API_ID =
 API_HASH = ""

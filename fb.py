@@ -1,11 +1,15 @@
 import os
+import time
 import requests
 
+from celery import Celery
 from configparser import ConfigParser
 from graphapiext import GraphAPIExt
 
-import logging
-logging.basicConfig(level=logging.ERROR)
+app = Celery()
+
+# import logging
+# logging.basicConfig(level=logging.ERROR)
 
 cfg = ConfigParser()
 cfg.read('config.ini')
@@ -18,6 +22,7 @@ fb = GraphAPIExt(
     access_token=access_token
 )
 
+@app.task
 def send_msg(text, media):
     if media and 'jpg' in media:
         fb.put_photo(
@@ -39,6 +44,7 @@ def send_msg(text, media):
             message=text
         )
         print("send one message")
+    time.sleep(60)
 
 
 

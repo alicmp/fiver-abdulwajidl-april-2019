@@ -53,7 +53,7 @@ async def handler(event):
     if event.media:
         media_path = await client.download_media(event.media, file='media/')
     
-    fb.send_msg(raw_text, media_path)
+    fb.send_msg.delay(raw_text, media_path)
 
 
 client.run_until_disconnected()
